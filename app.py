@@ -82,9 +82,9 @@ logging.basicConfig(filename="churn.log", level=logging.INFO)
 
 app = Flask(__name__)
 
-scaler = pickle.load(open("/model/minim_max.pkl", "rb"))
-model = pickle.load(open("/model/XGBclass_model.pkl", "rb"))
-label_encoders = pickle.load(open("/model/label_encoders.pkl", "rb"))
+scaler = pickle.load(open("model/minim_max.pkl", "rb"))
+model = pickle.load(open("model/XGBclass_model.pkl", "rb"))
+label_encoders = pickle.load(open("model/label_encoders.pkl", "rb"))
 
 @app.route('/')
 def index():
