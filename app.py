@@ -80,8 +80,7 @@ import logging
 
 logging.basicConfig(filename="churn.log", level=logging.INFO)
 
-application = Flask(__name__)
-app = application
+app = Flask(__name__)
 
 scaler = pickle.load(open("/config/workspace/model/minim_max.pkl", "rb"))
 model = pickle.load(open("/config/workspace/model/XGBclass_model.pkl", "rb"))
